@@ -1,7 +1,6 @@
-import java.awt.*;
 import javax.swing.*;
-
-public class FirstPage {
+import java.awt.*;
+public class SignInPage {
     ImageIcon image = new ImageIcon("bangladesh-railway.png");
 
     JFrame frame;
@@ -13,7 +12,7 @@ public class FirstPage {
     JButton buttonSignIn;
     JButton buttonSignUp;
     JButton forgotPassword;
-    FirstPage(){
+    SignInPage(){
         ImageIcon image = new ImageIcon("bangladesh-railway.png");
         ImageIcon image2 = new ImageIcon("train-illustration-for-train-1.jpg");
         JLabel user= new JLabel("Email or Phone Number");
@@ -31,7 +30,7 @@ public class FirstPage {
 
         frame = new JFrame();
         panel = new JPanel();
-        //JPanel panelBack= new JPanel();
+
         label=new JLabel(image);
         label.setText("Bangladesh Railway");
         label.setFont(new Font("Times New Roman", Font.BOLD, 20));
@@ -41,34 +40,26 @@ public class FirstPage {
         label.setIconTextGap(0);
         label2= new JLabel("        Doesn't have an account?"); 
         label2.setFont(new Font("Sitka Heading", Font.PLAIN, 12));
-        //label3= new JLabel(image2); 
 
-         buttonSignIn = new JButton("Sign In");
-         buttonSignIn.setFont(new Font("Sitka Heading", Font.PLAIN, 12));
-         buttonSignUp = new JButton("Sign Up");
-         buttonSignUp.setFont(new Font("Sitka Heading", Font.PLAIN, 12));
+        buttonSignIn = new JButton("Sign In");
+        buttonSignIn.setFont(new Font("Sitka Heading", Font.PLAIN, 12));
+        buttonSignUp = new JButton("Sign Up");
+        buttonSignUp.setFont(new Font("Sitka Heading", Font.PLAIN, 12));
 
-         buttonSignIn.setFocusable(false);
-         buttonSignUp.setFocusable(false);
+        buttonSignIn.setFocusable(false);
+        buttonSignUp.setFocusable(false);
          
-
-         
-        
         buttonSignIn.setBounds(50, 320, 200, 30);
         buttonSignUp.setBounds(50, 380, 200, 30);
-
 
         text1=new JTextField();  
         text1.setBounds(50,200, 200,30);  
         text2=new JTextField();  
         text2.setBounds(50,260, 200,30);  
 
-
         label.setBounds(70, 0, 180, 180);
         label2.setBounds(50, 360, 200, 20);
 
-
-    
         panel.setPreferredSize(new Dimension(320, 500));
         panel.setBackground(new Color(98, 174, 239));  
         panel.add(label);
@@ -88,13 +79,12 @@ public class FirstPage {
         frame.add(panel);
         frame.setSize(new Dimension(800, 800));
         frame.getContentPane().setBackground(new Color(155, 198, 227));
-        //frame.
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
         
     }
     public static void main(String [] args) {
-        new FirstPage();
+        new SignInPage();
 
     }
 }
