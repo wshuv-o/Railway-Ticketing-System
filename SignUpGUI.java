@@ -5,7 +5,7 @@ import javax.swing.plaf.DimensionUIResource;
 import javax.swing.text.FlowView;
 import javax.swing.*;
 
-public class signUp {
+public class SignUpGUI {
     public static void main(String [] args)
     {
     
