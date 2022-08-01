@@ -4,7 +4,7 @@ import javax.swing.plaf.basic.BasicOptionPaneUI.ButtonActionListener;
 
 import java.awt.*;
 
-public class resetPassword {
+public class ResetPasswordGUI {
     JButton buttonConfirm= new JButton("Confirm Change");
     JButton buttonBack= new JButton("Previous");
     Font myFont = new Font("BankGothic Md BT", Font.PLAIN, 20);
