@@ -4,7 +4,7 @@ import javax.swing.plaf.basic.BasicOptionPaneUI.ButtonActionListener;
 
 import java.awt.*;
 
-public class BkashPaymentGUI {
+public class MobileBankingPaymentGUI {
 
     JButton buttonPay= new JButton("Pay");
     JButton buttonBack= new JButton("Other Payment Method");
