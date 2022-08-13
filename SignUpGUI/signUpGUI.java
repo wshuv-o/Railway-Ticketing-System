@@ -11,10 +11,11 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import com.toedter.calendar.JCalendar;
-import com.toedter.components.JLocaleChooserBeanInfo;
-import com.toedter.calendar.JDateChooser;
-import com.toedter.calendar.demo.DateChooserPanel;
+// import com.toedter.calendar.JCalendar;
+// import com.toedter.components.JLocaleChooserBeanInfo;
+// import com.toedter.calendar.JDateChooser;
+// import com.toedter.calendar.demo.DateChooserPanel;
+import com.toedter.calendar.*;;
 
 
 
@@ -33,6 +34,8 @@ public class signUpGUI implements ActionListener{
   static String[] day2=new String[30];  
   static String[] day3=new String[28];  
 
+  // Font font = new Font("Garamond", Font.PLAIN, 18);
+  Font font = new Font("Avenir Next LT Pro", Font.PLAIN, 15);
   
     public signUpGUI()
     {
@@ -56,44 +59,52 @@ public class signUpGUI implements ActionListener{
      }
 
     JLabel namelabel;
-    Font myFont = new Font("Agency FB", Font.PLAIN, 23);
+    // Font myFont = new Font("Agency FB", Font.PLAIN, 23);
+    Font myFont = new Font("Comic Sans MS", Font.PLAIN, 19);
 
     namelabel =new JLabel();
     namelabel.setText("First Name");
     namelabel.setBounds(5,20,100,30);
-    namelabel.setFont(new Font("Agency FB", Font.PLAIN, 18));
+    namelabel.setFont(font);
+    namelabel.setForeground(Color.white);
 
 
    JLabel nameLabel2 =new JLabel();
    nameLabel2.setText("Last Name");
    nameLabel2.setBounds(220,20,100,30);
-   nameLabel2.setFont(new Font("Agency FB", Font.PLAIN, 18));
+   nameLabel2.setFont(font);
+   nameLabel2.setForeground(Color.white);
 
     JTextField nameTF1 = new JTextField();
     nameTF1.setLayout(null);
     nameTF1.setBounds(5,50, 200, 30);
     nameTF1.setFont(myFont);
     nameTF1.setOpaque(false);
+    nameTF1.setForeground(new Color(0xCFFFDC));
     nameTF1.setBorder(BorderFactory.createMatteBorder(0, 0, 2, 0, new Color(10,10,10)));
 
     
     JTextField nameTF2 = new JTextField();
     nameTF2.setLayout(null);
-    nameTF2.setBounds(220,50, 130, 30);
+    nameTF2.setBounds(220,50, 200, 30);
     nameTF2.setFont(myFont);
+    nameTF2.setForeground(new Color(0xCFFFDC));
     nameTF2.setOpaque(false);
     nameTF2.setBorder(BorderFactory.createMatteBorder(0, 0, 2, 0, new Color(10,10,10)));
 
     JLabel mobile=new JLabel();
     mobile.setText("Mobile Number");
     mobile.setBounds(5,90,100,30);
-    mobile.setFont(new Font("Agency FB", Font.PLAIN, 18));
+    mobile.setFont(font);
+    mobile.setForeground(Color.white);
+
 
     JTextField mobileNumber = new JTextField();
     mobileNumber.setLayout(null);
   //mobileNumber.setBackground(new Color(20,200,20));;;
-    mobileNumber.setBounds(5,120, 130, 30);
+    mobileNumber.setBounds(5,120, 200, 30);
     mobileNumber.setFont(myFont);
+    mobileNumber.setForeground(new Color(0xCFFFDC));
     mobileNumber.setOpaque(false);
     mobileNumber.setBorder(BorderFactory.createMatteBorder(0, 0, 2, 0, new Color(10,10,10)));
 
@@ -101,82 +112,82 @@ public class signUpGUI implements ActionListener{
     JLabel nidLabel =new JLabel();
     nidLabel.setText("NID");
     nidLabel.setBounds( 220,90,100,30);
-    nidLabel.setFont(new Font("Agency FB", Font.PLAIN, 18));
+    nidLabel.setFont(font);
+    nidLabel.setForeground(Color.white);
+
 
     JTextField nidField = new JTextField();
     nidField.setLayout(null);
     nidField.setBounds(220,120, 200, 30);
     nidField.setFont(myFont);
+    nidField.setForeground(new Color(0xCFFFDC));
     nidField.setOpaque(false);
     nidField.setBorder(BorderFactory.createMatteBorder(0, 0, 2, 0, new Color(10,10,10)));
 
     JLabel email =new JLabel();
     email.setText("E-Mail");
     email.setBounds(5,160,100,30);
-    email.setFont(new Font("Agency FB", Font.PLAIN, 18));
+    email.setFont(font);
+    email.setForeground(Color.white);
+
 
     JTextField emailField = new JTextField();
     emailField.setLayout(null);
     emailField.setBounds(5,190, 200, 30);
     emailField.setFont(myFont);
+    emailField.setForeground(new Color(0xCFFFDC));
     emailField.setOpaque(false);
     emailField.setBorder(BorderFactory.createMatteBorder(0, 0, 2, 0, new Color(10,10,10)));
  
     JLabel dobLabel =new JLabel();
     dobLabel.setText("Date Of Birth(YY/M/D)");
     dobLabel.setBounds(220,160,200,30);
-    dobLabel.setFont(new Font("Agency FB", Font.PLAIN, 18));
+    dobLabel.setFont(font);
+    dobLabel.setForeground(Color.white);
+
 
     
     dateChooser=new JDateChooser();
     
-    dateChooser.setBackground(new java.awt.Color(255, 255, 255));
-    dateChooser.setForeground(new java.awt.Color(255, 255, 255));
+    // dateChooser.setBackground(new java.awt.Color(255, 255, 255));
+    // dateChooser.setForeground(new java.awt.Color(255, 255, 255));
     dateChooser.setBounds(220,190, 200, 30);
     dateChooser.setToolTipText("");
-    dateChooser.setOpaque(false);
+    dateChooser.setBackground(Color.BLUE);
+    dateChooser.setBackground(Color.CYAN);
     // dateChooser.addActionListener(this);
+    dateChooser.setBorder(BorderFactory.createMatteBorder(0, 0, 2, 0, new Color(10,10,10)));
+    dateChooser.setOpaque(true);
 
 
-    // yearCombo= new JComboBox<>(year);
-    // yearCombo.setBounds(220,190, 60, 30);
-    // yearCombo.setBackground(Color.white);
-    // yearCombo.addActionListener(this);
-
-    // monthCombo = new JComboBox<>(month);
-    // monthCombo.setBounds(285,190, 60, 30);
-    // monthCombo.setBackground(Color.white);
-    // monthCombo.addActionListener(this);
-
-
-    // dayCombo= new JComboBox<>(day1);
-    // dayCombo.setBounds(350,190, 60, 30);
-    // dayCombo.setBackground(Color.white);
-    // dayCombo.setEditable(true);
-    // dayCombo.addActionListener(this); 
     
   
     JLabel passLabel =new JLabel();
     passLabel.setText("Password");
     passLabel.setBounds(5,230,100,30);
-    passLabel.setFont(new Font("Agency FB", Font.PLAIN, 18));
+    passLabel.setFont(font);
+    passLabel.setForeground(Color.white);
+
 
     JTextField pass = new JTextField();
     pass.setLayout(null);
     pass.setBounds(5,260, 200, 30);
     pass.setFont(myFont);
+    pass.setForeground(new Color(0xCFFFDC));
     pass.setOpaque(false);
     pass.setBorder(BorderFactory.createMatteBorder(0, 0, 2, 0, new Color(10,10,10)));
 
     JLabel conPassLabel =new JLabel();
     conPassLabel.setText("Confirm Password");
-    conPassLabel.setBounds(220,230,100,30);
-    conPassLabel.setFont(new Font("Agency FB", Font.PLAIN, 18));
+    conPassLabel.setBounds(220,230,200,30);
+    conPassLabel.setFont(font);
+    conPassLabel.setForeground(Color.white);
 
     JTextField conPassField = new JTextField();
    conPassField.setLayout(null);
    conPassField.setBounds(220,260, 200, 30);
    conPassField.setFont(myFont);
+   conPassField.setForeground(new Color(0xCFFFDC));
    conPassField.setOpaque(false);
    conPassField.setBorder(BorderFactory.createMatteBorder(0, 0, 2, 0, new Color(10,10,10)));
 
@@ -184,7 +195,7 @@ public class signUpGUI implements ActionListener{
    JButton createAccButton =new JButton();
    createAccButton.setText("Create Account");
    createAccButton.setBounds(150,320,130,30);
-   createAccButton.setBackground(new Color(250,250,250));
+   createAccButton.setBackground(new Color(0x93FFD8));
    createAccButton.setFocusable(false);
    createAccButton.addActionListener(this);
    //setOpaque(false);
@@ -193,19 +204,20 @@ public class signUpGUI implements ActionListener{
    JLabel alreadyJLabel =new JLabel();
     alreadyJLabel.setText("Already have an Account?");
     alreadyJLabel.setBounds(5,360,200,30);
-    alreadyJLabel.setFont(new Font("Agency FB", Font.PLAIN, 18));
+    alreadyJLabel.setFont(font);
+    alreadyJLabel.setForeground(Color.white);
 
 
    JButton createSignInButton =new JButton();
    createSignInButton.setText("Sign In");
-   createSignInButton.setBounds(140,360,50,30);
+   createSignInButton.setBounds(175,365,40,20);
    createSignInButton.setAlignmentX(JButton.LEFT_ALIGNMENT);
    createSignInButton.setBackground(new Color(250,250,250));
    createSignInButton.setFocusable(false);
-   createSignInButton.setForeground(Color.white);
+   createSignInButton.setForeground(new Color(0x9ED2C6));
 
    createSignInButton.setOpaque(false);
-   createSignInButton.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 0, new Color(100,10,10)));
+   createSignInButton.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, new Color(10,10,10)));
 
 
     panel2= new JPanel();
@@ -237,35 +249,29 @@ public class signUpGUI implements ActionListener{
 
     panel2.setMinimumSize(new DimensionUIResource(425, 400));
 
-    
-
-    
-
-   JButton imgButton =new JButton();
-   imgButton.setIcon(new ImageIcon(("train13.png")));
-   imgButton.setText("Sign In");
-   imgButton.setBounds(0,0,1024,700);
-   imgButton.setAlignmentX(JButton.LEFT_ALIGNMENT);
-   imgButton.setBackground(new Color(250,250,250));
-
-   imgButton.setOpaque(false);
-   imgButton.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 0, new Color(100,10,10)));
-
-
- 
-     JPanel panel1=new JPanel();
-     panel1.setPreferredSize(new Dimension(700,600));
-     panel1.setBackground(new Color(2, 247, 166 ));
-     panel1.setLayout(null);
-     panel1.add(imgButton);
- 
-
-
    
+  JButton imgButton =new JButton();
+  imgButton.setIcon(new ImageIcon(("train13.png")));
+  imgButton.setText("");
+  imgButton.setBounds(0,0,700,600);
+  imgButton.setAlignmentX(JButton.LEFT_ALIGNMENT);
+  imgButton.setBackground(new Color(250,250,250));
+
+  imgButton.setOpaque(false);
+  imgButton.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 0, new Color(100,10,10)));
+
+ 
+  JPanel panel1=new JPanel();
+  panel1.setPreferredSize(new Dimension(700,600));
+  panel1.setBackground(new Color(2, 247, 166 ));
+  panel1.setLayout(null);
+  panel1.add(imgButton);
+ 
+  
     JFrame frame = new JFrame();
-    frame.setTitle("Sign Up ");
+    frame.setTitle("Sign Up");
     frame.setSize(1920,1080);
-    frame.setMinimumSize(new Dimension(1400,500));
+    frame.setMinimumSize(new Dimension(1200,500));
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
     ImageIcon image1 =new ImageIcon("Bangladesh_railway_logo.png");
@@ -274,6 +280,7 @@ public class signUpGUI implements ActionListener{
     frame.add(panel1);
     frame.add(panel2);
     frame.setLayout(new GridBagLayout());
+  
 
     frame.getContentPane().setBackground(new Color( 0,153,153));
     frame.setVisible(true);
@@ -292,39 +299,11 @@ public static void main(String[] args)
 public void actionPerformed(ActionEvent e) {
   {
   
-    // String m= monthCombo.getSelectedItem().toString();
-    // String date=dayCombo.getSelectedItem().toString() +"-"+m+"-"+yearCombo.getSelectedItem().toString();
-    // String date=dateChooser.getSelectedItem().toString();
-    // String s=DateChooserPanel.getDateFormatString();
+ 
     SimpleDateFormat sdf= new SimpleDateFormat("yyyy-MM-dd");
     String s=sdf.format(dateChooser.getDate());
     System.out.println(s);
-  // System.out.println(DateChooserPanel);
-  // if(m=="1"||m=="3"||m=="5"||m=="7"||m=="8"||m=="10"||m=="12"){
-   
-   
-    
-  // }
-  // else if(m=="4"||m=="6"||m=="9"||m=="11"){
-  //   // dayCombo.setSelectedItem(day2);
-  //   // panel2.add(dayCombo2);
-  //   dayCombo.removeItem("31");
-  //   // day1[30]=null;
-  //   // System.out.println(day1[30]);
-  // }
-  // else if(m=="2"){
-  //   // dayCombo.setSelectedItem(day3);
-  //   // panel2.add(dayCombo3);
-  //   dayCombo.removeItem("31");
-  //   // day1[30]=null;
 
-  //   dayCombo.removeItem("30");
-  //   // day1[29]=null;
-
-  //   dayCombo.removeItem("29");
-  //   // day1[28]=null;
-
-  // }
 
 }
 }
