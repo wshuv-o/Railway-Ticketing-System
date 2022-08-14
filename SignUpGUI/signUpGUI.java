@@ -20,7 +20,6 @@ import com.toedter.calendar.*;;
 
 
 public class signUpGUI implements ActionListener{
-
   JComboBox monthCombo;
   JComboBox dayCombo;
   JComboBox yearCombo,dayCombo1,dayCombo2,dayCombo3;
@@ -60,7 +59,7 @@ public class signUpGUI implements ActionListener{
 
     JLabel namelabel;
     // Font myFont = new Font("Agency FB", Font.PLAIN, 23);
-    Font myFont = new Font("Comic Sans MS", Font.PLAIN, 19);
+    Font myFont = new Font("MV Boli", Font.PLAIN, 19);
 
     namelabel =new JLabel();
     namelabel.setText("First Name");
@@ -81,7 +80,7 @@ public class signUpGUI implements ActionListener{
     nameTF1.setFont(myFont);
     nameTF1.setOpaque(false);
     nameTF1.setForeground(new Color(0xCFFFDC));
-    nameTF1.setBorder(BorderFactory.createMatteBorder(0, 0, 2, 0, new Color(10,10,10)));
+    nameTF1.setBorder(BorderFactory.createMatteBorder(0, 0, 2, 0,new Color(10,10,10)));
 
     
     JTextField nameTF2 = new JTextField();
@@ -156,7 +155,6 @@ public class signUpGUI implements ActionListener{
     dateChooser.setBackground(Color.BLUE);
     dateChooser.setBackground(Color.CYAN);
     // dateChooser.addActionListener(this);
-    dateChooser.setBorder(BorderFactory.createMatteBorder(0, 0, 2, 0, new Color(10,10,10)));
     dateChooser.setOpaque(true);
 
 
@@ -195,9 +193,10 @@ public class signUpGUI implements ActionListener{
    JButton createAccButton =new JButton();
    createAccButton.setText("Create Account");
    createAccButton.setBounds(150,320,130,30);
-   createAccButton.setBackground(new Color(0x93FFD8));
+   createAccButton.setBackground(new Color(0x292929));
    createAccButton.setFocusable(false);
    createAccButton.addActionListener(this);
+   createAccButton.setForeground(new Color(0xFFFFFF));
    //setOpaque(false);
    //createAccButton.setBorder(BorderFactory.createMatteBorder(0, 0, 4, 0, new Color(100,10,10));
 
@@ -247,7 +246,7 @@ public class signUpGUI implements ActionListener{
     panel2.add(createSignInButton);
     panel2.add(alreadyJLabel);
 
-    panel2.setMinimumSize(new DimensionUIResource(425, 400));
+    // panel2.setMinimumSize(new DimensionUIResource(425, 400));
 
    
   JButton imgButton =new JButton();
@@ -266,12 +265,13 @@ public class signUpGUI implements ActionListener{
   panel1.setBackground(new Color(2, 247, 166 ));
   panel1.setLayout(null);
   panel1.add(imgButton);
+  // panel1.setMinimumSize(new Dimension(675,600));
  
   
     JFrame frame = new JFrame();
     frame.setTitle("Sign Up");
-    frame.setSize(1920,1080);
-    frame.setMinimumSize(new Dimension(1200,500));
+    frame.setSize(1170,640);
+    frame.setMinimumSize(new Dimension(1169,640));
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
     ImageIcon image1 =new ImageIcon("Bangladesh_railway_logo.png");
@@ -280,9 +280,14 @@ public class signUpGUI implements ActionListener{
     frame.add(panel1);
     frame.add(panel2);
     frame.setLayout(new GridBagLayout());
-  
 
-    frame.getContentPane().setBackground(new Color( 0,153,153));
+    Toolkit tk=Toolkit.getDefaultToolkit();
+    int x=(int) tk.getScreenSize().getWidth();
+    int y=(int) tk.getScreenSize().getHeight();
+    frame.setLocation(x/2-585, y/2-320);
+    
+
+    frame.getContentPane().setBackground(new Color( 0x292929));
     frame.setVisible(true);
     
 }
