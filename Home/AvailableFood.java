@@ -1,0 +1,126 @@
+package home;
+import java.lang.*;
+import javax.swing.*;
+
+import userprofile.Person;
+
+import java.awt.*;
+import java.awt.event.*;
+
+public class AvailableFood implements ActionListener{
+	Person person;
+	static int [][][] allButtonList= new int[5][4][50];
+
+	JButton button1;
+	public JButton button2, button3, button4, button5, button6, previous;
+	JMenuItem item1,item2,item3;JFrame frame;
+	public ImageIcon image1;
+	public ImageIcon image2;
+	public ImageIcon image3;
+	public ImageIcon image4;
+	
+	public AvailableFood(Person p, int[][][] allButtonList){
+		person=p;
+		AvailableFood.allButtonList=allButtonList;
+		
+		button1= new JButton("SHOVAN");
+		button2= new JButton("S_CHAIR");
+		button3= new JButton("AC_BERTH");
+		button4= new JButton("SNIGDHA");
+
+		image1= new ImageIcon("images/khichuri.jpg");
+		image2= new ImageIcon("images/sandwich.jpg");
+		image3= new ImageIcon("images/Cutlet1.jpg");
+		image4= new ImageIcon("images/chicken.jpg");
+	
+		button1.setIcon(image1);
+		button1.setBackground(Color.white);
+		button1.setHorizontalTextPosition(JButton.CENTER);
+		button1.setVerticalTextPosition(JButton.BOTTOM);
+		button1.setIconTextGap(20);
+		button1.setFont(new Font("Times new roman", Font.BOLD, 25));
+		button1.setFocusable(false);
+		button1.disable();
+
+		button2.setIcon(image2);
+		button2.setBackground(Color.white);
+		button2.setHorizontalTextPosition(JButton.CENTER);
+		button2.setVerticalTextPosition(JButton.BOTTOM);
+		button2.setIconTextGap(20);
+		button2.setFont(new Font("Times new roman", Font.BOLD, 25));
+		button2.setFocusable(false);
+		button2.disable();
+
+		button3.setIcon(image3);
+		button3.setBackground(Color.white);
+		button3.setHorizontalTextPosition(JButton.CENTER);
+		button3.setVerticalTextPosition(JButton.BOTTOM);
+		button3.setIconTextGap(20);
+		button3.setFont(new Font("Times new roman", Font.BOLD, 25));
+		button3.setFocusable(false);
+		button3.disable();
+
+		button4.setIcon(image4);
+		button4.setBackground(Color.white);
+		button4.setHorizontalTextPosition(JButton.CENTER);
+		button4.setVerticalTextPosition(JButton.BOTTOM);
+		button4.setIconTextGap(20);
+		button4.setFont(new Font("Times new roman", Font.BOLD, 25));
+		button4.setFocusable(false);
+		button4.disable();
+
+		previous= new JButton("                                                               ");
+		previous.setHorizontalTextPosition(JMenu.CENTER);
+		previous.setBackground(new Color(98, 174, 239));
+		previous.setFocusable(false);
+		previous.setIcon(new ImageIcon("images/Back.png"));
+		previous.setBorder(BorderFactory.createEmptyBorder());
+		previous.addActionListener(this);
+
+		JMenuBar menu = new JMenuBar();
+		menu.setPreferredSize(new Dimension(1400,100));
+		menu.setBackground(new Color(98, 174, 239));
+		menu.add(previous);
+
+
+		JLabel label = new JLabel();
+		label.setBackground(Color.PINK);
+		label.setText("Available Food");
+		label.setFont(new Font("Times new roman", Font.PLAIN, 55));
+		label.setHorizontalAlignment(JLabel.CENTER);
+
+		JPanel upperPanel = new JPanel();
+		upperPanel.setBackground(Color.WHITE);
+		upperPanel.setBounds(400,0, 1160, 200);
+		upperPanel.setLayout(new BorderLayout());
+		upperPanel.add(label);
+		
+		JPanel lowerPanel = new JPanel();
+		lowerPanel.setBackground(Color.white);
+		lowerPanel.setBounds(400, 200, 1160, 700);
+		lowerPanel.add(button1);
+		lowerPanel.add(button2);
+		lowerPanel.add(button3);
+		lowerPanel.add(button4);
+		lowerPanel.setLayout(new GridLayout(2,3));
+		
+		frame = new JFrame();
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setLayout(null);
+		frame.setSize(1960,1040);
+		frame.setJMenuBar(menu);
+		frame.add(upperPanel);
+		frame.add(lowerPanel);
+		frame.setVisible(true);
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		if(e.getSource()==previous){
+			frame.setVisible(false);
+			new Home(person,allButtonList);
+		}
+	}
+
+
+}
