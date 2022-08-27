@@ -11,7 +11,7 @@ import java.util.Calendar;
 import javax.swing.*;
 import javax.swing.plaf.DimensionUIResource;
 
-import home.*;
+import Home.*;
 
 public class Searchtrain implements ActionListener{
   static Train[] trainFromButton;
