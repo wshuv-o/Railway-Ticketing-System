@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.awt.*;
 import javax.swing.*;
 
-import home.Home;
+import Home.Home;
 
 
 
