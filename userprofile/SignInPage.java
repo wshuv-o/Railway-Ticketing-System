@@ -165,10 +165,23 @@ public class SignInPage implements ActionListener
 					}
 				}
 			}
+				
+			if( user=="admin"){
+				if( pass=="admin"){
+					counter = 2;
+				}
+			}
+				
 			
-			if(counter!=0){
+			
+			if(counter==1){
 				frame.setVisible(false);
 				new Home(person, allButtonList);
+			}
+
+			else if(counter==2){
+				frame.setVisible(false);
+				new AdminPage();
 			}
 			
 			else
