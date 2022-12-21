@@ -4,4 +4,5 @@ The main objective of the Railway Ticketing System is to manage the details of B
 
 <h2>Sign up page</h2>
 
-[![image.png](https://i.postimg.cc/jSpNJ7R7/image.png)](https://postimg.cc/68hTkT2W)
+[![image.png]("C:\Users\User\Downloads\signUP_page.jpg")
+
