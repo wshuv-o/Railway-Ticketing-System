@@ -5,5 +5,5 @@ The main objective of the Railway Ticketing System is to manage the details of B
 <h2>Sign up page</h2>
 hi<br>
 
-![Simple 15 puzzle game javascript HTML](https://raw.githubusercontent.com/wshuv-o/Railway-Ticketing-System/main/outlook/signUP_page.jpg)
+![sign up](https://raw.githubusercontent.com/wshuv-o/Railway-Ticketing-System/main/outlook/signUP_page.jpg)
 
