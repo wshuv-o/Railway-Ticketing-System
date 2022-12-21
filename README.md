@@ -16,7 +16,6 @@ You can create your account from our sign up page by giving some user details.
 
 ![image](https://user-images.githubusercontent.com/100506477/208820326-42620e74-4ae5-4176-8c0f-de14a92fd3e4.png)
 
-
-
-https://user-images.githubusercontent.com/100506477/208910773-56c00bec-a670-46b0-8bba-452ff10988bd.mp4
+<!--
+https://user-images.githubusercontent.com/100506477/208910773-56c00bec-a670-46b0-8bba-452ff10988bd.mp4-->
 
