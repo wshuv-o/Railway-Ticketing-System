@@ -10,6 +10,6 @@ hi<br>
 <br>
 hello
 <br>
-<img> src="https://raw.githubusercontent.com/wshuv-o/Railway-Ticketing-System/main/images/signUp.png" width="1170">
+<img> src="images/signUp.png" width="1170">
 
 ![signUp](https://user-images.githubusercontent.com/100506477/208813741-df00b2ce-2035-4689-ad00-2a71a8d240c4.png)
