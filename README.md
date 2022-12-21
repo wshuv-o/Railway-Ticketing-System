@@ -7,3 +7,7 @@ hi<br>
 
 ![sign up](https://raw.githubusercontent.com/wshuv-o/Railway-Ticketing-System/main/images/signUp.png)
 
+<br>
+hello
+<br>
+<img> src="https://raw.githubusercontent.com/wshuv-o/Railway-Ticketing-System/main/images/signUp.png" width="1170">
